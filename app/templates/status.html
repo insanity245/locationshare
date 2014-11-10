@@ -1,0 +1,13 @@
+<!-- extend from base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Share Status</h1>
+    <form action="" method="post" name="status">
+		{{ form.hidden_tag() }}
+		<p>
+         Open up to your localites<br>
+		 {{ form.status }}, {{form.name}}<br>
+		<p><input type="submit" value="Share"></p>
+	</form>
+{% endblock %}
