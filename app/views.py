@@ -5,7 +5,7 @@ from flask import render_template
 # default route
 @app.route('/')
 def default():
-	return "Yay, Flask is awesome"
+	return render_template('base.html')
 
 # generic test
 @app.route('/test')

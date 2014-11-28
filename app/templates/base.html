@@ -1,9 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html>
 	<head>
-		<title>Welcome to microblog</title>
+		<title>Welcome to Tumu's App</title>
+		<script type=text/javascript>
+			function hello(){
+				window.alert("hi")
+			}		
+		</script>
 	</head>
 	<body>
-		<div>Microblog: <a href="/test">Home</a></div>
+	<p>
+	Hello. Lets share between close peoples.
+	</p>
+		<script type="text/javascript">
+			function getLocation() {
+				window.alert("getLocation");
+			    if (navigator.geolocation) {
+			        alert("if()");
+					navigator.geolocation.getCurrentPosition(showPosition);
+			    } else {
+			    	alert('It seems like Geolocation, which is required for this page, is not enabled in your browser. Please use a browser which supports it.');
+				}
+			}
+			function showPosition(position) {
+				alert('Your latitude is :'+position.coords.latitude+' and longitude is '+position.coords.longitude);
+			}
+		</script>"
+		<div>Share your location: <a href="/">Home</a></div>
 		<hr>
 		{% block content %}{% endblock %}
 	</body>
